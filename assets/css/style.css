@@ -55,6 +55,13 @@ a {
     }
 }
 
+.hero {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
 /* Service */
 .service .icon {
     display: grid;
