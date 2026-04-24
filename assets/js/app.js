@@ -9,6 +9,11 @@ const themeStorageKey = "shvm-theme";
 
 const applyTheme = (theme) => {
     document.documentElement.setAttribute("data-theme", theme);
+    document.body.setAttribute("data-theme", theme);
+    if (themeToggle) {
+        themeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        themeToggle.setAttribute("title", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    }
 };
 
 const storedTheme = localStorage.getItem(themeStorageKey);
