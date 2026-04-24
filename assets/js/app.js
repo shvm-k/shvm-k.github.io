@@ -4,6 +4,16 @@ const navLinks = document.querySelectorAll(".site-nav a");
 const sections = [...document.querySelectorAll("main section[id]")];
 const revealItems = document.querySelectorAll(".reveal");
 const yearNode = document.querySelector("#year");
+const themeToggle = document.querySelector(".theme-toggle");
+const themeStorageKey = "shvm-theme";
+
+const applyTheme = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+};
+
+const storedTheme = localStorage.getItem(themeStorageKey);
+const preferredDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+applyTheme(storedTheme || (preferredDark ? "dark" : "light"));
 
 const closeMenu = () => {
     if (!menuToggle || !siteNav) {
@@ -21,6 +31,14 @@ if (menuToggle && siteNav) {
         menuToggle.setAttribute("aria-expanded", String(!expanded));
         siteNav.classList.toggle("is-open", !expanded);
         document.body.classList.toggle("menu-open", !expanded);
+    });
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        const nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        applyTheme(nextTheme);
+        localStorage.setItem(themeStorageKey, nextTheme);
     });
 }
 
