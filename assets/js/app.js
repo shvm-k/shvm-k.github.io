@@ -1,56 +1,66 @@
-const navbar = document.querySelector('.navbar')
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector(".site-nav");
+const navLinks = document.querySelectorAll(".site-nav a");
+const sections = [...document.querySelectorAll("main section[id]")];
+const revealItems = document.querySelectorAll(".reveal");
+const yearNode = document.querySelector("#year");
 
-window.addEventListener('scroll', () => {
-    if(this.scrollY > 0) {
-        navbar.classList.remove('py-4')
-        navbar.classList.add('shadow', 'py-3')
-    } else {
-        navbar.classList.add('py-4')
-        navbar.classList.remove('shadow', 'py-3')
-    }
-})
-
-// AOS
-AOS.init({
-    duration: 700
-});
-
-
-const sections = document.querySelectorAll('.section');
-const sectBtns = document.querySelectorAll('.controlls');
-const sectBtn = document.querySelectorAll('.control');
-const allSections = document.querySelector('.main-content');
-
-
-function PageTransitions() {
-    //Button click active class
-    for (let i = 0; i < sectBtn.length; i++) {
-        sectBtn[i].addEventListener('click', function() {
-            let currentBtn = document.querySelectorAll('.active-btn');
-            currentBtn[0].className = currentBtn[0].className.replace('active-btn', '');
-            this.className += ' active-btn';
-        })
+const closeMenu = () => {
+    if (!menuToggle || !siteNav) {
+        return;
     }
 
-    //Sctions Active 
-    allSections.addEventListener('click', (e) => {
-        const id = e.target.dataset.id;
-        if (id) {
-            //resmove selected from the other btns
-            sectBtns.forEach((btn) => {
-                btn.classList.remove('active')
-            })
-            e.target.classList.add('active')
+    menuToggle.setAttribute("aria-expanded", "false");
+    siteNav.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+};
 
-            //hide other sections
-            sections.forEach((section) => {
-                section.classList.remove('active')
-            })
-
-            const element = document.getElementById(id);
-            element.classList.add('active');
-        }
-    })
+if (menuToggle && siteNav) {
+    menuToggle.addEventListener("click", () => {
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!expanded));
+        siteNav.classList.toggle("is-open", !expanded);
+        document.body.classList.toggle("menu-open", !expanded);
+    });
 }
 
-PageTransitions();
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        closeMenu();
+    });
+});
+
+const setActiveLink = () => {
+    const current = sections.find((section) => {
+        const rect = section.getBoundingClientRect();
+        return rect.top <= 140 && rect.bottom >= 140;
+    });
+
+    navLinks.forEach((link) => {
+        const targetId = link.getAttribute("href");
+        link.classList.toggle("is-active", current && targetId === `#${current.id}`);
+    });
+};
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.18
+});
+
+revealItems.forEach((item) => {
+    revealObserver.observe(item);
+});
+
+window.addEventListener("scroll", setActiveLink, { passive: true });
+window.addEventListener("resize", setActiveLink);
+setActiveLink();
+
+if (yearNode) {
+    yearNode.textContent = new Date().getFullYear();
+}
