@@ -1,437 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9J085D3W27"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-9J085D3W27');
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N. Shivam Thakur | Frontend Developer, UI/UX Designer, Creative Portfolio</title>
     <meta
         name="description"
-        content="Portfolio of N. Shivam Thakur, a frontend developer and UI/UX designer from Guwahati, Assam. Explore landing pages, product UI, creative design, frontend work, and contact details."
+        content="Portfolio of Nilabh Shivam, a frontend developer, UI/UX designer, and content writer based in India."
     >
-    <meta
-        name="keywords"
-        content="N Shivam Thakur, Shivam portfolio, frontend developer Guwahati, UI UX designer India, Figma portfolio, creative designer, landing page designer, web designer Assam"
-    >
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="N. Shivam Thakur | Frontend Developer, UI/UX Designer, Creative Portfolio">
-    <meta
-        property="og:description"
-        content="A Figma-inspired personal portfolio for frontend development, UI/UX design, landing pages, and creative digital work."
-    >
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://shvm-k.github.io/assets/images/hero.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#ff5c39">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <title>Nilabh Shivam | Frontend Developer &amp; UI/UX Designer</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": "Person",
-                    "name": "N. Shivam Thakur",
-                    "jobTitle": "Frontend Developer and UI/UX Designer",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Guwahati",
-                        "addressRegion": "Assam",
-                        "postalCode": "781028",
-                        "addressCountry": "IN"
-                    },
-                    "email": "mailto:nilabhshivam333@gmail.com",
-                    "url": "https://shvm-k.github.io/",
-                    "sameAs": [
-                        "https://github.com/shvm-k",
-                        "https://twitter.com/shvm_k",
-                        "https://www.instagram.com/shvm.k"
-                    ]
-                },
-                {
-                    "@type": "WebSite",
-                    "name": "N. Shivam Thakur Portfolio",
-                    "url": "https://shvm-k.github.io/",
-                    "description": "Portfolio site for frontend development, UI/UX design, creative web work, and landing page design."
-                }
-            ]
-        }
-    </script>
 </head>
 <body>
-    <div class="page-noise"></div>
-    <div class="page-gradient page-gradient-one"></div>
-    <div class="page-gradient page-gradient-two"></div>
+    <nav>
+        <a class="nav-logo" href="#hero">Shvm.</a>
 
-    <header class="site-header" id="top">
-        <div class="container header-row">
-            <a class="brand" href="#top" aria-label="Shvm home">Shvm.</a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-cluster">
-                <nav class="site-nav" id="site-nav">
-                    <a href="#work">Work</a>
-                    <a href="#services">Services</a>
-                    <a href="#resume">Story</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact" class="nav-cta">Contact</a>
-                </nav>
-                <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-                    <i class="ri-moon-line theme-icon theme-icon-dark"></i>
-                    <i class="ri-sun-line theme-icon theme-icon-light"></i>
+        <button
+            class="nav-menu-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+        >
+            <i class="ri-menu-3-line"></i>
+        </button>
+
+        <div class="nav-panel">
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#services">What I Do</a></li>
+                <li><a href="#work">Projects</a></li>
+                <li><a href="#resume">Experience</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a class="nav-contact-btn" href="#contact">Contact</a>
+                <button class="dark-toggle" type="button" aria-label="Toggle dark mode">
+                    <i class="ri-contrast-2-line"></i>
                 </button>
             </div>
         </div>
-    </header>
+    </nav>
 
     <main>
-        <section class="hero-section" id="hero">
-            <div class="container hero-grid">
-                <div class="hero-copy reveal">
-                    <p class="eyebrow">Frontend developer • UI/UX designer • creative systems thinker</p>
-                    <h1>I design clean, high-impact digital experiences.</h1>
-                    <p class="hero-lead">
-                        I’m <strong>N. Shivam Thakur</strong>, a frontend developer and creative designer from Guwahati, Assam. I work on landing pages, product interfaces, visual systems, and creative web experiences that blend clarity, motion, and strong storytelling.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="button button-brand" href="https://drive.google.com/file/d/1cer80i3Hal4VbXtWddRgSSfsfn7glqGE/view?usp=sharing" target="_blank" rel="noreferrer">Download Resume</a>
-                        <a class="button button-ghost" href="#work">See Selected Work</a>
-                    </div>
-                    <div class="signal-row">
-                        <article class="signal-card">
-                            <span>Focus</span>
-                            <strong>UI systems + frontend polish</strong>
-                        </article>
-                        <article class="signal-card">
-                            <span>Based in</span>
-                            <strong>Guwahati, Assam, India</strong>
-                        </article>
-                        <article class="signal-card">
-                            <span>Best fit</span>
-                            <strong>Landing pages, product UI, creative web</strong>
-                        </article>
-                    </div>
+        <section id="hero" class="hero">
+            <div class="hero-blob hero-blob-one"></div>
+            <div class="hero-blob hero-blob-two"></div>
+
+            <div class="hero-left">
+                <div class="hero-tagline">
+                    <span>Hi, I'm Shvm <span class="wave">👋</span></span>
                 </div>
 
-                <aside class="hero-stage reveal">
-                    <div class="stage-card stage-card-main">
-                        <div class="stage-topline">
-                            <span>Profile canvas</span>
-                            <span class="status-pill"><i class="ri-checkbox-circle-fill"></i> Available for work</span>
+                <h1>I design landing pages and product interfaces that actually convert.</h1>
+
+                <p class="hero-bio">
+                    <strong>I’m Nilabh Shivam</strong>, an India-based creative developer who enjoys translating ideas
+                    into polished interfaces. My work sits at the intersection of visual design, frontend craft, and
+                    storytelling.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a
+                        class="btn-primary"
+                        href="https://drive.google.com/file/d/10jDHzr9SNjFEhgxrQZ2J6q80EXY8BUI7/view?usp=sharing"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Download Resume
+                    </a>
+                    <a class="btn-secondary" href="#work">View Projects</a>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="hero-visual-shell">
+                    <div class="hero-orbit hero-orbit-one"></div>
+                    <div class="hero-orbit hero-orbit-two"></div>
+
+                    <div class="hero-screen">
+                        <div class="hero-screen-bar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <div class="portrait-frame">
-                            <img src="./assets/images/hero.png" alt="Portrait of N. Shivam Thakur">
-                        </div>
-                        <div class="stage-metrics">
-                            <div>
-                                <span>Design</span>
-                                <strong>Figma-first thinking</strong>
+
+                        <div class="hero-screen-main">
+                            <div class="hero-panel hero-panel-primary">
+                                <span class="hero-panel-kicker"></span>
+                                <span class="hero-panel-line hero-panel-line-lg"></span>
+                                <span class="hero-panel-line hero-panel-line-md"></span>
+                                <span class="hero-panel-line hero-panel-line-sm"></span>
                             </div>
-                            <div>
-                                <span>Build</span>
-                                <strong>HTML, CSS, JS</strong>
-                            </div>
-                            <div>
-                                <span>Voice</span>
-                                <strong>Content + visual clarity</strong>
+
+                            <div class="hero-panel hero-panel-floating">
+                                <span class="hero-pill"></span>
+                                <span class="hero-panel-line hero-panel-line-xs"></span>
+                                <span class="hero-panel-line hero-panel-line-md"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="floating-note floating-note-a">
-                        <span>UI / UX</span>
-                        <strong>Clean flows, clearer decisions.</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="services-intro">
+                <span class="section-label">What I Do</span>
+                <h2>From concept to interface, I help products look sharper and feel easier to use.</h2>
+                <p class="wide">
+                    I like working across design and development so ideas stay consistent from first sketch to final
+                    interaction.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-item">
+                    <div class="service-icon"><i class="ri-layout-4-fill"></i></div>
+                    <h3>UI &amp; Visual Design</h3>
+                    <p>Landing pages, marketing layouts, and design systems that feel modern without losing clarity.</p>
+                </article>
+                <article class="service-item">
+                    <div class="service-icon"><i class="ri-compasses-2-fill"></i></div>
+                    <h3>UX Thinking</h3>
+                    <p>User flows, hierarchy, and interaction decisions shaped around ease of use and clean navigation.</p>
+                </article>
+                <article class="service-item">
+                    <div class="service-icon"><i class="ri-code-s-slash-line"></i></div>
+                    <h3>Frontend Development</h3>
+                    <p>Responsive interfaces built with HTML, CSS, JavaScript, and a strong attention to presentation.</p>
+                </article>
+                <article class="service-item service-item-wide">
+                    <div class="service-icon"><i class="ri-quill-pen-line"></i></div>
+                    <h3>Content &amp; Brand Voice</h3>
+                    <p>Clear writing that supports the product, strengthens messaging, and improves communication.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="work" class="work-section">
+            <div class="work-intro">
+                <span class="section-label">Selected Work</span>
+                <h2>Projects that reflect how I think about layout, storytelling, and interface polish.</h2>
+                <p class="wide">These samples combine visual design experiments, landing page concepts, and frontend builds.</p>
+            </div>
+
+            <div class="work-list">
+                <article class="project-card project-1">
+                    <div class="project-info">
+                        <span class="project-type">Frontend</span>
+                        <h3>AeroPurity</h3>
+                        <p>A featured project slot for a cleaner product-facing experience built around clarity, trust, and polished presentation.</p>
+                        <p class="project-result">Result — Reserved as the lead featured project and ready for your final project details.</p>
+                        <a
+                            class="project-link"
+                            href="https://github.com/shvm-k"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Browse GitHub Profile <i class="ri-arrow-right-line"></i>
+                        </a>
                     </div>
-                    <div class="floating-note floating-note-b">
-                        <span>Frontend</span>
-                        <strong>Design translated into real screens.</strong>
+                    <div class="project-visual">
+                        <img src="./assets/images/project-04.jpg" alt="AeroPurity project preview">
                     </div>
-                </aside>
+                </article>
+
+                <article class="project-card project-3">
+                    <div class="project-info">
+                        <span class="project-type">UI / UX</span>
+                        <h3>Shoe Retail Experience</h3>
+                        <p>A concept e-commerce interface focused on product visibility, browsing comfort, and a modern retail feel.</p>
+                        <p class="project-result">Result — Balanced product discovery with a cleaner, more editorial browsing experience.</p>
+                        <a
+                            class="project-link"
+                            href="https://dribbble.com/shots/19972490-Shoe-retailer-website"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Explore Project <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                    <div class="project-visual">
+                        <img src="./assets/images/project-03.jpg" alt="Shoe retailer website concept">
+                    </div>
+                </article>
+
+                <article class="project-card project-5">
+                    <div class="project-info">
+                        <span class="project-type">Upcoming</span>
+                        <h3>Next Featured Project</h3>
+                        <p>This slot is open for the next project you want to feature, with room for a custom title, summary, and result.</p>
+                        <p class="project-result">Result — A clean placeholder card you can replace with your next featured build.</p>
+                        <a class="project-link" href="https://github.com/shvm-k" target="_blank" rel="noreferrer">
+                            Browse GitHub Profile <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                    <div class="project-visual">
+                        <img src="./assets/images/project-05.jpg" alt="Additional project preview">
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section class="logo-band">
-            <div class="container logo-band-row reveal">
-                <p>Design systems thinking, visual direction, and frontend execution shaped into one personal web experience.</p>
-                <div class="chip-row" aria-label="Key strengths">
-                    <span>Landing Pages</span>
-                    <span>UI/UX Design</span>
-                    <span>Frontend Development</span>
-                    <span>Creative Direction</span>
-                    <span>Content Writing</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt" id="services">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">What I do</p>
-                    <h2>A personal studio approach, not a generic portfolio template.</h2>
+        <section id="resume" class="resume-section">
+            <div class="story-section">
+                <div class="story-left">
+                    <span class="section-label">Experience &amp; Toolkit</span>
+                    <h2>Design, development, and content work that keeps broadening how I build.</h2>
                     <p>
-                        The strongest digital work is not just attractive. It should guide attention, communicate quickly, and leave a clear memory. That’s the lens I bring to product UI, brand-led landing pages, and frontend builds.
-                    </p>
-                </div>
-                <div class="services-grid">
-                    <article class="service-card reveal">
-                        <div class="service-icon"><i class="ri-layout-4-line"></i></div>
-                        <h3>UI / Visual Design</h3>
-                        <p>I create interfaces that are easy to scan, visually coherent, and designed to hold attention without becoming noisy.</p>
-                    </article>
-                    <article class="service-card reveal">
-                        <div class="service-icon"><i class="ri-focus-3-line"></i></div>
-                        <h3>UX Design</h3>
-                        <p>I think through navigation, hierarchy, usability, and flow so the experience feels intuitive instead of merely decorative.</p>
-                    </article>
-                    <article class="service-card reveal">
-                        <div class="service-icon"><i class="ri-code-s-slash-line"></i></div>
-                        <h3>Frontend Development</h3>
-                        <p>I build responsive websites and interactions that stay faithful to the visual direction while feeling fast and intentional.</p>
-                    </article>
-                    <article class="service-card reveal">
-                        <div class="service-icon"><i class="ri-database-2-line"></i></div>
-                        <h3>Database Awareness</h3>
-                        <p>I understand the structure behind products, which helps me design and build interfaces that map cleanly to real systems.</p>
-                    </article>
-                    <article class="service-card reveal">
-                        <div class="service-icon"><i class="ri-brush-line"></i></div>
-                        <h3>Brand and Creative Design</h3>
-                        <p>I enjoy shaping visual direction, from typography and layout tone to the small details that make a page feel authored.</p>
-                    </article>
-                    <article class="service-card reveal">
-                        <div class="service-icon"><i class="ri-quill-pen-line"></i></div>
-                        <h3>Content Writing</h3>
-                        <p>I can support web copy and content structure so a page performs better for both humans and search engines.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="work">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">Selected work</p>
-                    <h2>Interfaces, concepts, and builds that show how I think.</h2>
-                    <p>
-                        These projects cover visual design, landing page thinking, and frontend execution. Each one is chosen to show range, not just fill a gallery.
+                        My path has been shaped by curiosity across multiple creative disciplines, and that cross-functional
+                        perspective shows up in the work.
                     </p>
                 </div>
 
-                <div class="work-grid">
-                    <article class="work-card work-card-large reveal">
-                        <img src="./assets/images/project-01.jpg" alt="Mobile landing page UI design by N. Shivam Thakur">
-                        <div class="work-copy">
-                            <p class="work-tag">UI Design</p>
-                            <h3>Landing Page Concept</h3>
-                            <p>A landing page exploration focused on hierarchy, spacing, readable call-to-action framing, and responsive presentation across screens.</p>
-                            <a href="https://dribbble.com/shots/20019584-Mobile-browser-view-landing-page" target="_blank" rel="noreferrer">Open project</a>
-                        </div>
+                <div class="timeline">
+                    <article class="timeline-entry">
+                        <div class="timeline-date">November 2022 - Present</div>
+                        <div class="timeline-role">UI/UX Designer</div>
+                        <p class="timeline-desc">
+                            I started my product design journey with Figma, learning how to shape ideas into cleaner interfaces and prototypes.
+                        </p>
                     </article>
 
-                    <article class="work-card reveal">
-                        <img src="./assets/images/project-03.jpg" alt="Shoe retail site UI design by N. Shivam Thakur">
-                        <div class="work-copy">
-                            <p class="work-tag">UI Design</p>
-                            <h3>Shoe Retail Site</h3>
-                            <p>An e-commerce direction built around product clarity, visual energy, and conversion-friendly layout choices.</p>
-                            <a href="https://dribbble.com/shots/19972490-Shoe-retailer-website" target="_blank" rel="noreferrer">Open project</a>
-                        </div>
+                    <article class="timeline-entry">
+                        <div class="timeline-date">July 2022 - Present</div>
+                        <div class="timeline-role">Content Writer</div>
+                        <p class="timeline-desc">
+                            I work as a core content team member in the IoT Club at my university, writing material that informs and engages.
+                        </p>
                     </article>
 
-                    <article class="work-card reveal">
-                        <img src="./assets/images/project-04.jpg" alt="Frontend project preview for Qestly">
-                        <div class="work-copy">
-                            <p class="work-tag">Frontend</p>
-                            <h3>Qestly</h3>
-                            <p>A frontend-focused build that reflects my interest in translating interface ideas into working browser experiences.</p>
-                            <a href="https://github.com/shvm-k/questly" target="_blank" rel="noreferrer">View repository</a>
-                        </div>
-                    </article>
-
-                    <article class="work-card reveal">
-                        <img src="./assets/images/project-05.jpg" alt="Backend login page project preview">
-                        <div class="work-copy">
-                            <p class="work-tag">Backend</p>
-                            <h3>Login Page</h3>
-                            <p>A smaller project that shows my interest in functional UI, account flows, and product-oriented screen structure.</p>
-                            <a href="https://github.com/shvm-k" target="_blank" rel="noreferrer">Visit GitHub</a>
-                        </div>
+                    <article class="timeline-entry">
+                        <div class="timeline-date">2021 - Present</div>
+                        <div class="timeline-role">Frontend Developer</div>
+                        <p class="timeline-desc">
+                            I’ve been building projects with HTML, CSS, and JavaScript while continuing to sharpen layout, visual, and web design skills.
+                        </p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="section section-alt" id="resume">
-            <div class="container story-grid">
-                <div class="story-copy reveal">
-                    <p class="eyebrow">My story</p>
-                    <h2>From learning design tools to shaping better digital experiences.</h2>
+        <section id="contact" class="contact-section">
+            <div class="contact-inner">
+                <div class="contact-left">
+                    <div class="eyebrow">Let’s Connect</div>
+                    <h2>Have a project, internship, or idea in mind?</h2>
                     <p>
-                        I started my UI/UX design journey with Figma in November 2022, and that pushed me toward a broader way of thinking about products: not just how they look, but how they explain themselves. Alongside design, I’ve worked on content and frontend development, which gives me a more complete view of how digital work performs in the real world.
+                        I’m open to collaborating on interfaces, frontend builds, and design-led digital work. If something feels exciting, I’d love to hear about it.
                     </p>
-                    <p>
-                        That mix matters. Strong websites are rarely the result of visuals alone. They need structure, content, consistency, and the ability to turn ideas into working screens.
-                    </p>
-                </div>
-
-                <div class="timeline reveal" aria-label="Career timeline">
-                    <article class="timeline-item">
-                        <span class="timeline-date">November 2022 - present</span>
-                        <h3>UI/UX Designer</h3>
-                        <p>I started my product design journey with Figma and began developing a stronger eye for visual systems, hierarchy, and interaction design.</p>
-                    </article>
-                    <article class="timeline-item">
-                        <span class="timeline-date">July 2022 - present</span>
-                        <h3>Content Writer</h3>
-                        <p>I have worked as a core team member of the content team in my university’s IoT Club, building communication skills that also strengthen web content strategy.</p>
-                    </article>
-                    <article class="timeline-item">
-                        <span class="timeline-date">2021 - present</span>
-                        <h3>Frontend Developer</h3>
-                        <p>I’ve built projects using HTML, CSS, and JavaScript, and I keep developing my ability to move from concept to implementation.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="skills">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">Tools and strengths</p>
-                    <h2>A skill stack that supports design, build, and communication.</h2>
-                </div>
-                <div class="skills-board reveal">
-                    <article class="skill-meter">
-                        <div class="skill-head">
-                            <h3>HTML</h3>
-                            <span>90%</span>
-                        </div>
-                        <div class="meter"><span style="width: 90%"></span></div>
-                    </article>
-                    <article class="skill-meter">
-                        <div class="skill-head">
-                            <h3>CSS</h3>
-                            <span>75%</span>
-                        </div>
-                        <div class="meter"><span style="width: 75%"></span></div>
-                    </article>
-                    <article class="skill-meter">
-                        <div class="skill-head">
-                            <h3>JavaScript</h3>
-                            <span>10%</span>
-                        </div>
-                        <div class="meter"><span style="width: 10%"></span></div>
-                    </article>
-                    <article class="skill-meter">
-                        <div class="skill-head">
-                            <h3>Figma</h3>
-                            <span>90%</span>
-                        </div>
-                        <div class="meter"><span style="width: 90%"></span></div>
-                    </article>
-                    <article class="skill-meter">
-                        <div class="skill-head">
-                            <h3>Postgres</h3>
-                            <span>10%</span>
-                        </div>
-                        <div class="meter"><span style="width: 10%"></span></div>
-                    </article>
-                    <article class="skill-meter">
-                        <div class="skill-head">
-                            <h3>MySQL</h3>
-                            <span>20%</span>
-                        </div>
-                        <div class="meter"><span style="width: 20%"></span></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt" id="faq">
-            <div class="container faq-grid">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">Search-friendly detail</p>
-                    <h2>Questions someone might search before hiring or contacting me.</h2>
-                    <p>
-                        This section is here on purpose: it helps explain what I do clearly for visitors, collaborators, and search engines.
-                    </p>
-                </div>
-                <div class="faq-list reveal">
-                    <details open>
-                        <summary>Who is N. Shivam Thakur?</summary>
-                        <p>N. Shivam Thakur is a frontend developer and UI/UX designer based in Guwahati, Assam, India, focused on landing pages, product interfaces, creative web layouts, and visually strong digital experiences.</p>
-                    </details>
-                    <details>
-                        <summary>What kind of projects do I work on?</summary>
-                        <p>I work on UI design, UX-focused web experiences, frontend development, visual direction, creative design, and content-supported portfolio or product websites.</p>
-                    </details>
-                    <details>
-                        <summary>Do I use Figma in my workflow?</summary>
-                        <p>Yes. Figma is central to how I explore layout, hierarchy, components, and presentation before or alongside frontend implementation.</p>
-                    </details>
-                    <details>
-                        <summary>Why is this portfolio designed like a product landing page?</summary>
-                        <p>Because I want the site to stand out in search results and direct visits, not just function like a resume gallery. It is structured to communicate identity, capability, and style quickly.</p>
-                    </details>
-                    <details>
-                        <summary>How can someone contact me?</summary>
-                        <p>You can contact me through email, Twitter/X, or Instagram using the links below, or download my resume directly from this site.</p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <section class="section contact-section" id="contact">
-            <div class="container contact-shell reveal">
-                <div class="contact-copy">
-                    <p class="eyebrow">Let’s build something sharp</p>
-                    <h2>Have a project, collaboration, or idea worth shaping?</h2>
-                    <p>
-                        I’m interested in design-forward websites, interface work, landing pages, and projects where visual craft and clarity both matter.
-                    </p>
-                    <div class="contact-actions">
-                        <a class="button button-brand" href="mailto:nilabhshivam333@gmail.com">Email Me</a>
-                        <a class="button button-ghost" href="https://drive.google.com/file/d/1cer80i3Hal4VbXtWddRgSSfsfn7glqGE/view?usp=sharing" target="_blank" rel="noreferrer">Open Resume</a>
+                    <div class="contact-btns">
+                        <a class="btn-primary" href="mailto:shivamux.dev@gmail.com">Email Me</a>
+                        <a class="btn-secondary" href="https://github.com/shvm-k" target="_blank" rel="noreferrer">GitHub Profile</a>
                     </div>
                 </div>
 
-                <div class="contact-cards">
-                    <article class="contact-card">
-                        <span>Email</span>
-                        <a href="mailto:nilabhshivam333@gmail.com">nilabhshivam333@gmail.com</a>
-                    </article>
-                    <article class="contact-card">
-                        <span>Twitter / X</span>
-                        <a href="https://twitter.com/shvm_k" target="_blank" rel="noreferrer">@shvm_k</a>
-                    </article>
-                    <article class="contact-card">
-                        <span>GitHub</span>
-                        <a href="https://github.com/shvm-k" target="_blank" rel="noreferrer">github.com/shvm-k</a>
-                    </article>
-                    <article class="contact-card">
-                        <span>Location</span>
-                        <p>Delhi, India</p>
-                    </article>
+                <div class="contact-details">
+                    <div class="contact-row">
+                        <span class="contact-row-label">Email</span>
+                        <a class="contact-row-value" href="mailto:shivamux.dev@gmail.com">shivamux.dev@gmail.com</a>
+                    </div>
+                    <div class="contact-row">
+                        <span class="contact-row-label">Location</span>
+                        <span class="contact-row-value">India</span>
+                    </div>
+                    <div class="contact-row">
+                        <span class="contact-row-label">Social</span>
+                        <span class="contact-row-value contact-social-links">
+                            <a href="https://twitter.com/shvm_k" target="_blank" rel="noreferrer">Twitter</a>
+                            <a href="https://www.instagram.com/shvm.k" target="_blank" rel="noreferrer">Instagram</a>
+                            <a href="https://dribbble.com/shvm-k" target="_blank" rel="noreferrer">Dribbble</a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-row">
-            <p>Designed and developed for the web by <a href="#top">Shivam</a>.</p>
-            <p><span id="year"></span> • Built to be portfolio-first and search-friendly.</p>
-        </div>
+    <footer>
+        <p>Designed and built by <strong>Nilabh Shivam</strong>.</p>
+        <a class="footer-link" href="#hero">Back to top</a>
     </footer>
 
     <script src="./assets/js/app.js"></script>
