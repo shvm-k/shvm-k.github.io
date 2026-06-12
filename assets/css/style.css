@@ -2124,7 +2124,7 @@ footer strong {
   width: 100%;
   padding: clamp(64px, 9vw, 120px) clamp(20px, 4vw, 60px);
   background-color: var(--bg-page);
-  border-top: 2px solid #FFFFFF;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sys-section--tight {
