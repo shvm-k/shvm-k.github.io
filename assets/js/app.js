@@ -70,6 +70,20 @@ if (sectionTargets.length) {
     sectionTargets.forEach((section) => observer.observe(section));
 }
 
+const scrollBtn = document.getElementById("scroll-top");
+
+if (scrollBtn) {
+    window.addEventListener("scroll", () => {
+        const show = window.scrollY > 300;
+        scrollBtn.style.opacity = show ? "1" : "0";
+        scrollBtn.style.pointerEvents = show ? "auto" : "none";
+    });
+
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
+
 const tiltWrap = document.getElementById("tiltWrap");
 const tiltCard = document.getElementById("tiltCard");
 
