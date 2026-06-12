@@ -2126,3 +2126,125 @@ footer strong {
 .sys-contact-social a:hover {
   color: var(--accent);
 }
+
+/* ---------- CAPABILITY TAG LISTS ---------- */
+
+.sys-tag-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sys-tag-list li {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  padding: 5px 10px;
+}
+
+/* ---------- PROJECT PROBLEM/SOLUTION BLOCKS ---------- */
+
+.sys-project-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sys-project-block-label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.sys-project-meta.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ---------- ENGINEERING STACK ---------- */
+
+.sys-stack-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  border: 2px solid #FFFFFF;
+  background: #FFFFFF;
+}
+
+.sys-stack-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  background: var(--bg-card);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.sys-stack-item i {
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+/* ---------- CERTIFICATIONS ---------- */
+
+.sys-cert-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  border: 2px solid #FFFFFF;
+  background: #FFFFFF;
+}
+
+.sys-cert-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: var(--bg-card);
+}
+
+.sys-cert-label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.sys-cert-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ---------- CONTACT STATUS ---------- */
+
+.sys-status-live {
+  color: var(--accent) !important;
+}
+
+@media (max-width: 900px) {
+  .sys-stack-grid,
+  .sys-cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sys-project-meta.cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
