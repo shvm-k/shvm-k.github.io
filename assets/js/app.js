@@ -106,3 +106,56 @@ if (tiltWrap && tiltCard) {
         tiltCard.style.setProperty("--ry", "0deg");
     });
 }
+
+const proofSection = document.getElementById("proof");
+const proofStatus = document.getElementById("proofStatus");
+const proofCounts = Array.from(document.querySelectorAll(".sys-proof-count"));
+
+if (proofSection && proofStatus && proofCounts.length) {
+    const startDelays = [500, 1200, 1900, 2600];
+    const countDuration = 600;
+
+    const animateCount = (el) => {
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.dataset.suffix || "";
+        const start = performance.now();
+
+        const step = (now) => {
+            const progress = Math.min((now - start) / countDuration, 1);
+            const value = Math.round(progress * target);
+            el.textContent = `${value}${suffix}`;
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        };
+
+        requestAnimationFrame(step);
+    };
+
+    const runSequence = () => {
+        proofStatus.textContent = "SYS.STATUS // INITIALIZING";
+
+        proofCounts.forEach((el, index) => {
+            setTimeout(() => animateCount(el), startDelays[index] ?? index * 700);
+        });
+
+        setTimeout(() => {
+            proofStatus.textContent = "STATUS: READY";
+        }, 3000);
+    };
+
+    const proofObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    runSequence();
+                    observer.disconnect();
+                }
+            });
+        },
+        { threshold: 0.4 }
+    );
+
+    proofObserver.observe(proofSection);
+}
