@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <nav>
-        <a class="nav-logo" href="#hero">Shvm.</a>
+    <nav class="brutal-nav">
+        <a class="brutal-logo" href="#hero">shvm.</a>
 
         <button
-            class="nav-menu-toggle"
+            class="nav-menu-toggle brutal-menu-toggle"
             type="button"
             aria-label="Toggle navigation"
             aria-expanded="false"
@@ -25,78 +25,66 @@
             <i class="ri-menu-3-line"></i>
         </button>
 
-        <div class="nav-panel">
-            <ul class="nav-links">
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#services">What I Do</a></li>
-                <li><a href="#work">Projects</a></li>
-                <li><a href="#resume">Experience</a></li>
+        <div class="nav-panel brutal-nav-panel">
+            <ul class="nav-links brutal-nav-links">
+                <li><a href="#hero" class="active">home</a></li>
+                <li><a href="#services">what i do</a></li>
+                <li><a href="#work">projects</a></li>
+                <li><a href="#resume">experience</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
-            <div class="nav-actions">
-                <a class="nav-contact-btn" href="#contact">Contact</a>
-                <button class="dark-toggle" type="button" aria-label="Toggle dark mode">
-                    <i class="ri-contrast-2-line"></i>
-                </button>
-            </div>
         </div>
     </nav>
 
     <main>
-        <section id="hero" class="hero">
-            <div class="hero-blob hero-blob-one"></div>
-            <div class="hero-blob hero-blob-two"></div>
-
-            <div class="hero-left">
-                <div class="hero-tagline">
-                    <span>Hi, I'm Shvm <span class="wave">👋</span></span>
+        <section id="hero" class="hero brutal-hero">
+            <div class="brutal-hero-left">
+                <div class="brutal-badge">
+                    <span>⚡ FRONTEND CRAFT &amp; VISUAL UX</span>
                 </div>
 
-                <h1>I design landing pages and product interfaces that actually convert.</h1>
+                <h1 class="brutal-title">I design landing pages and product interfaces that actually convert.</h1>
 
-                <p class="hero-bio">
-                    <strong>I’m Nilabh Shivam</strong>, an India-based creative developer who enjoys translating ideas
-                    into polished interfaces. My work sits at the intersection of visual design, frontend craft, and
-                    storytelling.
+                <p class="brutal-subtitle">
+                    I'm <span class="brutal-underline">Nilabh Shivam</span>, a creative developer crafting interfaces
+                    at the intersection of visual authority and frontend engineering. Currently building
+                    <span class="brutal-underline">FileVibe</span> in public.
                 </p>
 
-                <div class="hero-cta-group">
+                <div class="brutal-cta-group">
                     <a
-                        class="btn-primary"
+                        class="brutal-btn"
                         href="https://drive.google.com/file/d/10jDHzr9SNjFEhgxrQZ2J6q80EXY8BUI7/view?usp=sharing"
                         target="_blank"
                         rel="noreferrer"
                     >
                         Download Resume
                     </a>
-                    <a class="btn-secondary" href="#work">View Projects</a>
+                    <a class="brutal-btn" href="#work">View Projects</a>
                 </div>
             </div>
 
-            <div class="hero-visual" aria-hidden="true">
-                <div class="hero-visual-shell">
-                    <div class="hero-orbit hero-orbit-one"></div>
-                    <div class="hero-orbit hero-orbit-two"></div>
+            <div class="brutal-hero-right" aria-hidden="true">
+                <div class="brutal-card">
+                    <div class="brutal-card-header">
+                        <span>SYS.STATUS // STACK_ALIGNED</span>
+                        <span class="brutal-status-dot"></span>
+                    </div>
 
-                    <div class="hero-screen">
-                        <div class="hero-screen-bar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                    <div class="brutal-card-body">
+                        <div class="brutal-box">
+                            <span class="brutal-box-label">01 // PROJECT</span>
+                            <p><span class="brutal-underline">1 Flagship Tool</span> — FileVibe</p>
                         </div>
 
-                        <div class="hero-screen-main">
-                            <div class="hero-panel hero-panel-primary">
-                                <span class="hero-panel-kicker"></span>
-                                <span class="hero-panel-line hero-panel-line-lg"></span>
-                                <span class="hero-panel-line hero-panel-line-md"></span>
-                                <span class="hero-panel-line hero-panel-line-sm"></span>
-                            </div>
+                        <div class="brutal-box">
+                            <span class="brutal-box-label">02 // EDUCATION</span>
+                            <p><span class="brutal-underline">BTech CSE</span> — Tech Stack</p>
+                        </div>
 
-                            <div class="hero-panel hero-panel-floating">
-                                <span class="hero-pill"></span>
-                                <span class="hero-panel-line hero-panel-line-xs"></span>
-                                <span class="hero-panel-line hero-panel-line-md"></span>
-                            </div>
+                        <div class="brutal-box">
+                            <span class="brutal-box-label">03 // STATUS</span>
+                            <p><span class="brutal-underline">Available</span> for Roles</p>
                         </div>
                     </div>
                 </div>

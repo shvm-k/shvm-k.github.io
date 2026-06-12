@@ -1289,3 +1289,246 @@ footer strong {
     justify-content: flex-start;
   }
 }
+
+/* ============================================
+   SKETCH-BRUTALIST HERO OVERHAUL
+   ============================================ */
+
+.brutal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px clamp(20px, 4vw, 60px);
+  background: #FFFFFF;
+  border-bottom: 2px solid #000;
+}
+
+.brutal-logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #000;
+  text-decoration: none;
+  text-transform: lowercase;
+  letter-spacing: -0.02em;
+}
+
+.brutal-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", "SF Mono", monospace;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+
+.brutal-nav-links a {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #000;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.brutal-nav-links a:hover,
+.brutal-nav-links a.active {
+  background-color: #FFE600;
+}
+
+.brutal-menu-toggle {
+  display: none;
+}
+
+.brutal-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: clamp(48px, 8vw, 96px) clamp(20px, 4vw, 60px);
+  background-color: #FFFFFF;
+  background-image:
+    linear-gradient(to right, #ECECEC 1px, transparent 1px),
+    linear-gradient(to bottom, #ECECEC 1px, transparent 1px);
+  background-size: 32px 32px;
+  min-height: auto;
+  overflow: visible;
+}
+
+.brutal-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 1;
+}
+
+.brutal-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 2px solid #000;
+  background: #FFFFFF;
+  font-family: "Courier New", "SF Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brutal-title {
+  font-size: clamp(2.4rem, 5.5vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #000;
+  margin: 0;
+}
+
+.brutal-subtitle {
+  max-width: 540px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+}
+
+.brutal-underline {
+  position: relative;
+  font-weight: 700;
+  color: #000;
+}
+
+.brutal-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #FFE600;
+}
+
+.brutal-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.brutal-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 3px solid #000;
+  background: #FFFFFF;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 0 #000;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+.brutal-btn:hover {
+  background-color: #FFE600;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 0 #000;
+}
+
+.brutal-hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.brutal-card {
+  width: 100%;
+  max-width: 440px;
+  border: 3px solid #000;
+  background: #FFFFFF;
+  box-shadow: 8px 8px 0 0 #000;
+}
+
+.brutal-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: #000;
+  color: #FFFFFF;
+  font-family: "Courier New", "SF Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.brutal-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  animation: brutal-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes brutal-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+.brutal-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+.brutal-box {
+  border: 2px solid #000;
+  padding: 16px;
+}
+
+.brutal-box-label {
+  display: block;
+  font-family: "Courier New", "SF Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 6px;
+}
+
+.brutal-box p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .brutal-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .brutal-nav-links {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .brutal-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .brutal-nav-links {
+    flex-wrap: wrap;
+  }
+}
