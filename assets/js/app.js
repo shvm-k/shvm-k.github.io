@@ -69,3 +69,26 @@ if (sectionTargets.length) {
 
     sectionTargets.forEach((section) => observer.observe(section));
 }
+
+const tiltWrap = document.getElementById("tiltWrap");
+const tiltCard = document.getElementById("tiltCard");
+
+if (tiltWrap && tiltCard) {
+    const maxTilt = 12;
+
+    tiltWrap.addEventListener("mousemove", (event) => {
+        const rect = tiltWrap.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const px = (x / rect.width) - 0.5;
+        const py = (y / rect.height) - 0.5;
+
+        tiltCard.style.setProperty("--rx", `${px * maxTilt * 2}deg`);
+        tiltCard.style.setProperty("--ry", `${py * -maxTilt * 2}deg`);
+    });
+
+    tiltWrap.addEventListener("mouseleave", () => {
+        tiltCard.style.setProperty("--rx", "0deg");
+        tiltCard.style.setProperty("--ry", "0deg");
+    });
+}

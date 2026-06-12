@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 :root {
-  --bg-page: #F5F2EC;
-  --bg-surface: #FFFFFF;
-  --bg-surface-hover: #FAFAF8;
-  --border-color: #E8E4DC;
-  --border-subtle: rgba(0,0,0,0.06);
-  --text-primary: #0F0F0E;
-  --text-secondary: #6B6860;
-  --text-tertiary: #9B9890;
-  --accent: #E5540A;
-  --accent-hover: #C94608;
-  --accent-tint: rgba(229, 84, 10, 0.08);
-  --accent-tint-text: #C04A08;
+  --bg-page: #0B0B0C;
+  --bg-surface: #18181B;
+  --bg-surface-hover: #1F1F23;
+  --border-color: rgba(255,255,255,0.18);
+  --border-subtle: rgba(255,255,255,0.08);
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1AA;
+  --text-tertiary: #71717A;
+  --accent: #FFE600;
+  --accent-hover: #FFEE55;
+  --accent-tint: rgba(255, 230, 0, 0.12);
+  --accent-tint-text: #FFE600;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
@@ -22,19 +22,11 @@
   --section-space-tight: clamp(28px, 4vw, 44px);
 }
 
-[data-theme="dark"] {
-  --bg-page: #111111;
-  --bg-surface: #1C1C1C;
-  --bg-surface-hover: #222222;
-  --border-color: rgba(255,255,255,0.08);
-  --border-subtle: rgba(255,255,255,0.05);
-  --text-primary: #F0EDE8;
-  --text-secondary: rgba(240,237,232,0.55);
-  --text-tertiary: rgba(240,237,232,0.35);
-  --accent: #F06020;
-  --accent-hover: #FF6E28;
-  --accent-tint: rgba(240, 96, 32, 0.12);
-  --accent-tint-text: #FF7A3A;
+body {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
 *,
@@ -712,29 +704,21 @@ nav {
 }
 
 .project-card {
-  border-radius: var(--radius-xl);
+  border-radius: 0;
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 340px;
-  transition: transform 0.2s;
+  background: var(--bg-surface);
+  border: 2px solid #FFFFFF;
+  box-shadow: 4px 4px 0 0 #FFFFFF;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
+  transform: translate(4px, 4px);
+  box-shadow: none;
 }
-
-.project-card.project-1 { background: #F0EAE0; }
-.project-card.project-2 { background: #E8EEF5; }
-.project-card.project-3 { background: #EAF0E8; }
-.project-card.project-4 { background: #F1E8E6; }
-.project-card.project-5 { background: #EEE7F2; }
-
-[data-theme="dark"] .project-card.project-1 { background: #2A2420; }
-[data-theme="dark"] .project-card.project-2 { background: #1E2530; }
-[data-theme="dark"] .project-card.project-3 { background: #1E2820; }
-[data-theme="dark"] .project-card.project-4 { background: #2A2020; }
-[data-theme="dark"] .project-card.project-5 { background: #241F2C; }
 
 .project-info {
   padding: 40px 36px;
@@ -745,11 +729,16 @@ nav {
 }
 
 .project-type {
+  display: inline-block;
+  font-family: "Courier New", "SF Mono", monospace;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.10em;
-  text-transform: uppercase;
-  color: var(--accent);
+  text-transform: lowercase;
+  color: #000;
+  background: #FFE600;
+  padding: 4px 10px;
+  width: fit-content;
 }
 
 .project-info h3 {
@@ -775,6 +764,7 @@ nav {
 }
 
 .project-link {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -783,9 +773,18 @@ nav {
   color: var(--text-primary);
   text-decoration: none;
   padding: 10px 0;
-  border-bottom: 2px solid var(--text-primary);
   width: fit-content;
   transition: gap 0.15s;
+}
+
+.project-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 100%;
+  height: 2px;
+  background-color: #FFE600;
 }
 
 .project-link:hover {
@@ -1655,5 +1654,58 @@ footer strong {
 
   .brutal-nav-links {
     flex-wrap: wrap;
+  }
+}
+
+/* ---------- HERO RIGHT — 3D LAYERED TILT CARD ---------- */
+
+.tilt-wrap {
+  width: 100%;
+  max-width: 440px;
+  perspective: 1000px;
+}
+
+.tilt-card {
+  position: relative;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--ry, 0deg)) rotateY(var(--rx, 0deg));
+  transition: transform 0.2s ease-out;
+}
+
+.tilt-base {
+  position: absolute;
+  inset: 0;
+  transform: translate(16px, 16px) translateZ(20px);
+  background: #FFE600;
+  border: 2px solid #FFFFFF;
+}
+
+.tilt-front {
+  position: relative;
+  transform: translateZ(50px);
+  border: 3px solid #FFFFFF;
+  background: #18181B;
+}
+
+.tilt-pop {
+  transform: translateZ(80px);
+}
+
+@media (max-width: 900px) {
+  .tilt-wrap {
+    perspective: none;
+  }
+
+  .tilt-card {
+    transform: none !important;
+  }
+
+  .tilt-base {
+    display: none;
+  }
+
+  .tilt-pop {
+    transform: none;
   }
 }
