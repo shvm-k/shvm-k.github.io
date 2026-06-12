@@ -2472,6 +2472,49 @@ footer strong {
   color: var(--text-primary);
 }
 
+/* ---------- CERTIFICATION PILLS ---------- */
+
+.sys-cert-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.sys-cert-row-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.sys-cert-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sys-cert-pill {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: color 0.1s ease, border-color 0.1s ease;
+}
+
+.sys-cert-pill:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 /* ---------- CONTACT STATUS ---------- */
 
 .sys-status-live {
