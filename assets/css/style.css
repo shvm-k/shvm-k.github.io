@@ -1520,6 +1520,35 @@ footer strong {
   color: #FFFFFF;
 }
 
+.brutal-box--research {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.brutal-box-title {
+  font-size: 1.05rem;
+}
+
+.brutal-box-desc {
+  font-size: 0.85rem !important;
+  font-weight: 400 !important;
+  line-height: 1.6;
+  color: var(--text-secondary) !important;
+}
+
+.brutal-box-link {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.brutal-box-link:hover {
+  text-decoration: underline;
+}
+
 /* ---------- WHAT I DO — SERVICE GRID ---------- */
 
 .brutal-services {
