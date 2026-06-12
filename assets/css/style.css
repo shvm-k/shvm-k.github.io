@@ -2342,13 +2342,128 @@ footer strong {
   color: var(--text-primary);
 }
 
+.sys-contact-social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.8rem;
+}
+
 .sys-contact-social a {
   color: var(--text-primary);
   transition: color 0.15s ease;
+  line-height: 1;
 }
 
 .sys-contact-social a:hover {
   color: var(--accent);
+}
+
+/* ---------- STACK (simple columns) ---------- */
+
+.sys-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.sys-stack-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+.sys-stack-list {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .sys-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .sys-stack-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- JOURNEY (line + dots) ---------- */
+
+.sys-journey-line {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-left: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.sys-journey-line::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--border-subtle);
+}
+
+.sys-journey-entry {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.sys-journey-marker {
+  position: absolute;
+  left: -28px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.sys-journey-date {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  min-width: 4ch;
+}
+
+.sys-journey-role {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 4px;
+}
+
+.sys-journey-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .sys-journey-entry {
+    flex-direction: column;
+    gap: 4px;
+  }
 }
 
 /* ---------- CAPABILITY TAG LISTS ---------- */
