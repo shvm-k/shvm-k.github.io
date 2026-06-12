@@ -20,8 +20,8 @@
   --radius-lg: 16px;
   --radius-xl: 22px;
   --page-gutter: clamp(24px, 4vw, 60px);
-  --section-space: clamp(32px, 4vw, 56px);
-  --section-space-tight: clamp(20px, 3vw, 32px);
+  --section-space: clamp(24px, 3vw, 40px);
+  --section-space-tight: clamp(16px, 2vw, 24px);
 }
 
 body {
@@ -1354,7 +1354,7 @@ footer strong {
   grid-template-columns: 1.1fr 1fr;
   gap: 64px;
   align-items: center;
-  padding: clamp(32px, 6vw, 72px) clamp(20px, 4vw, 60px) clamp(24px, 4vw, 48px);
+  padding: clamp(24px, 5vw, 56px) clamp(20px, 4vw, 60px) clamp(20px, 3vw, 36px);
   background-color: #050505;
   background-image:
     linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
@@ -1751,8 +1751,8 @@ footer strong {
 .sys-header {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 32px;
+  gap: 10px;
+  margin-bottom: 24px;
   position: relative;
   z-index: 1;
 }
@@ -1788,7 +1788,7 @@ footer strong {
 }
 
 .sys-header--tight {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .sys-header--row2 {
@@ -2271,8 +2271,8 @@ footer strong {
   margin: 0;
 }
 
-/* Background section layout */
-#background .sys-experience {
+/* Journey section layout */
+#journey .sys-experience {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
@@ -2286,7 +2286,7 @@ footer strong {
 @media (max-width: 900px) {
   .sys-project--flagship .sys-project-body,
   .sys-projects-grid,
-  #background .sys-experience,
+  #journey .sys-experience,
   .brutal-services-grid--row {
     grid-template-columns: 1fr;
   }
@@ -2378,36 +2378,6 @@ footer strong {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* ---------- ENGINEERING STACK ---------- */
-
-.sys-stack-grid {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  border: 2px solid #FFFFFF;
-  background: #FFFFFF;
-}
-
-.sys-stack-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 24px;
-  background: var(--bg-card);
-  font-family: var(--mono);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-primary);
-}
-
-.sys-stack-item i {
-  font-size: 1.3rem;
-  color: var(--accent);
-}
-
 /* ---------- CERTIFICATIONS ---------- */
 
 .sys-cert-grid {
@@ -2442,26 +2412,7 @@ footer strong {
   color: var(--text-primary);
 }
 
-/* ---------- STACK TIERS ---------- */
-
-.stack-supporting {
-  opacity: 0.75;
-}
-
-.stack-supporting i,
-.stack-supporting svg {
-  font-size: 1.1rem;
-  width: 1.1em;
-  height: 1.1em;
-}
-
-/* ---------- RESEARCH CARD + CERT PILLS ---------- */
-
-.sys-background-side {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
+/* ---------- RESEARCH CARD ---------- */
 
 .sys-research-card {
   display: flex;
@@ -2492,17 +2443,6 @@ footer strong {
   text-decoration: underline;
 }
 
-.sys-cert-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-}
-
-.sys-cert-pills--card {
-  margin-top: 4px;
-}
-
 .sys-build-meta {
   display: flex;
   flex-direction: column;
@@ -2530,23 +2470,6 @@ footer strong {
 .sys-build-value {
   font-weight: 700;
   color: var(--text-primary);
-}
-
-.sys-cert-pill {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
-  color: var(--text-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 999px;
-  padding: 6px 14px;
-  text-decoration: none;
-  transition: color 0.1s ease, border-color 0.1s ease;
-}
-
-.sys-cert-pill:hover {
-  color: var(--accent);
-  border-color: var(--accent);
 }
 
 /* ---------- CONTACT STATUS ---------- */
@@ -2584,7 +2507,6 @@ footer strong {
 }
 
 @media (max-width: 900px) {
-  .sys-stack-grid,
   .sys-cert-grid {
     grid-template-columns: repeat(2, 1fr);
   }
