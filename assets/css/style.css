@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap");
 
 :root {
   --bg-page: #050505;
@@ -1308,12 +1308,26 @@ footer strong {
 }
 
 .brutal-logo {
+  font-family: 'Space Grotesk', 'Sora', sans-serif;
   font-size: 1.6rem;
   font-weight: 800;
   color: #FFFFFF;
   text-decoration: none;
-  text-transform: lowercase;
-  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.brutal-logo span {
+  position: absolute;
+  left: -0.15em;
+  right: -0.15em;
+  top: 28%;
+  bottom: 18%;
+  background: #FFE600;
+  z-index: -1;
 }
 
 .brutal-nav-links {
