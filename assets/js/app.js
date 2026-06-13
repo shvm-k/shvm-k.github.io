@@ -1,5 +1,3 @@
-const toggle = document.querySelector(".dark-toggle");
-const html = document.documentElement;
 const nav = document.querySelector("nav");
 const menuToggle = document.querySelector(".nav-menu-toggle");
 const navPanel = document.querySelector(".nav-panel");
@@ -7,24 +5,6 @@ const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
 const sectionTargets = navLinks
     .map((link) => document.querySelector(link.getAttribute("href")))
     .filter(Boolean);
-
-if (localStorage.getItem("theme") === "dark") {
-    html.setAttribute("data-theme", "dark");
-} else {
-    html.removeAttribute("data-theme");
-}
-
-if (toggle) {
-    toggle.addEventListener("click", () => {
-        if (html.getAttribute("data-theme") === "dark") {
-            html.removeAttribute("data-theme");
-            localStorage.setItem("theme", "light");
-        } else {
-            html.setAttribute("data-theme", "dark");
-            localStorage.setItem("theme", "dark");
-        }
-    });
-}
 
 if (menuToggle && nav && navPanel) {
     menuToggle.addEventListener("click", () => {
